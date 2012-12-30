@@ -1,0 +1,7 @@
+{
+  "greeting":{
+    "br": "Oi {0}.",
+    "de": "Hallo {0}.",
+    "en": "Hello {0}."
+  }
+}

@@ -1,0 +1,64 @@
+backgroundColor(fromColor, toColor)
+  background-image -webkit-gradient(linear, 0% 0%, 0% 100%, from(fromColor), to(toColor))
+
+boxShadow(args...)
+  -moz-box-shadow args
+  -webkit-box-shadow args
+  box-shadow args
+
+borderRadius(r)
+  -moz-border-radius r
+  -webkit-border-radius r
+  border-radius r
+
+borderBoxSizing()
+  -moz-box-sizing border-box
+  -ms-box-sizing border-box
+  -webkit-box-sizing border-box
+  box-sizing border-box
+
+borderRadius(r)
+  -moz-border-radius r
+  -webkit-border-radius r
+  border-radius r
+
+boxFlex(n)
+  -webkit-box-flex n
+  -moz-box-flex n
+  -box-flex n
+
+displayBox()
+  display -webkit-box
+  display -moz-box
+  display -box
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+  display block
+
+html
+  height 100%
+  font-size 100%
+  -webkit-text-size-adjust 100%
+  -ms-text-size-adjust 100%
+
+body
+  font 14px "Helvetica Neue", Helvetica, Arial, sans-serif
+  padding 0px
+  margin 0 auto
+  width 100%
+  color #666
+  overflow-x hidden
+  backgroundColor(#fff, #ddd)
+
+ul, div
+  margin 0
+  padding 0
+
+ul
+  list-style none
+
+#app
+  overflow hidden
+
+#content
+  padding 10px

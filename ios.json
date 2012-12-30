@@ -1,0 +1,34 @@
+{
+  "build": "./www",
+  "html":{
+    "title": "Verve",
+    "layout": "src/views/layout.hogan", 
+    "index": "src/views/index.hogan",
+    "filename": "./www/index.html",
+    "css": "main.css",
+    "script": {
+      "jsDir": "./libs/client",
+      "jsFile": "./www/javascripts/libs.js", 
+      "jsFiles": ["jquery.1.7.1.min.js","hammer-0.6.1.js","jquery.hammer.js","hogan-1.0.5.js","jquery.spin.js","spin.min.js", "cordova-2.3.0rc2_ios.js"],
+      "scriptTags": ["L.js", "Main.js", "templates.js"]
+    }
+  },
+  "coffeescript": [
+    {
+      "source": "./src/coffeescripts",
+      "destination": "./www/javascripts"
+    }
+  ],
+  "stylus": {
+    "source": "./src/stylesheets",
+    "destination": "./www"
+  },
+  "hogan": {
+    "source": "./src/templates",
+    "destination": "./www/javascripts/templates.js",
+    "namespace": "T"
+  },
+  "assets": [
+    {"source":"./src/locales.json", "destination": "./www/locales.json", "watch": true}
+  ]
+}
