@@ -8,12 +8,12 @@
   , "dependencies": {
       "growl": "*"
       , "hogan.js": ">=2.0.0"
-      , "stylus": "0.26.0"
-      , "coffee-script":"1.3.3"
-      , "mocha":"1.4.2"
-      , "should":"1.1.0"
-      , "coffeelint":"0.5.0"
-      , "node-minify":"0.4.2"
-      , "docco": "0.4.0"
+      , "stylus": ">=0.31.0"
+      , "coffee-script":">=1.4.0"
+      , "mocha":">=1.7.4"
+      , "should":">=1.2.1"
+      , "coffeelint":">=0.5.4"
+      , "node-minify":">=0.7.1"
+      , "docco": ">=0.4.0"
   }
 }
