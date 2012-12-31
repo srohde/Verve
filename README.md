@@ -5,7 +5,7 @@ Verve is a lightweight technology stack for modern web development. It was build
 
 This is all licensed under MIT except for
 * libs/client/cordova-2.3.0rc2_ios.js
-* libs/client/hogan-1.0.5.js
+* libs/client/hogan-1.0.5.js  
 which are Apache 2.0.
 
 ## Quick Overview
@@ -47,12 +47,15 @@ In order to use Verve you need to install [node.js](http://nodejs.org) and Coffe
 
     $ sudo npm install -g coffee-script
 
-## Getting started
-Clone repos, create a new project, install dependencies and compile resources:
+Clone PhoneGap and Verve:
 
-    $ cd <your_work_dir>
     $ git clone git@github.com:phonegap/phonegap.git
     $ git clone git@github.com:srohde/Verve.git
+
+## Getting started
+
+Create a new project, install dependencies and compile resources:
+
     $ phonegap/lib/ios/bin/create <project_dir> <package_name> <project_name>
     $ ditto Verve <project_dir>
     $ cd <project_dir>
