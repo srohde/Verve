@@ -1,10 +1,46 @@
 Verve
 ===
 
-Verve is a lightweight technology stack for modern web development targeting mobile apps using [Apache Cordova](http://cordova.apache.org) aka [PhoneGap](http://phonegap.com).  
-Instead of using plain HTML, CSS and JavaScript you can
-use a combination of great open source projects which make
-web development fast, easy and fun. While the main focus are mobile apps Verve can also be used for web apps as well.
+Verve is a lightweight technology stack for modern web development. It was build to target mobile apps using [Apache Cordova](http://cordova.apache.org) aka [PhoneGap](http://phonegap.com).
+
+## Quick Overview
+
+Verve is combining the use of the following open source projects:
+
+* __CoffeeScript__ Scripting
+* __Stylus__ CSS
+* __Hogan__ HTML Templates
+* __Mocha__ Test engine
+* __Should__ BDD style assertions
+* __Casper.js__ Functional testing
+* __L__ Localization
+* __Hammer.js__ Touch events
+* __JQuery__ DOM, AJAX
+* __spin.js__ No image, no CSS spinner
+* __docco__ Docs
+* __Coffeelint__ Lint code
+
+## How it works
+
+The core of the Verve engine is the `Cakefile` which watches all CoffeeScript, Stylus and Hogan files. Whenever a file changes it automatically gets compiled into the output directory. You can invoke the Cakefile directly:
+
+    $ cake --config ios.json dev
+
+or invoke it with the short handle through the Makefile:
+
+    $ make ios
+
+__Hint__: If `make` is not found you need to install the Command Line Tools: XCode->Settings->Downloads
+
+For [Growl notifications support](https://github.com/visionmedia/node-growl) install growlnotify. On OS X 10.8, Notification Center is supported using terminal-notifier. To install:
+
+    $ sudo gem install terminal-notifier
+
+## Setup
+
+In order to use Verve you need to install [node.js](http://nodejs.org) and Coffeescript:
+
+    $ sudo npm install -g coffee-script
 
 ## Getting started
 Clone repos, create a new project, install dependencies and compile resources:
@@ -43,36 +79,34 @@ Open your favorite editor and start hacking on:
 ### JSON Configuration
 
 The project configuration is defined in `ios.json`.
-You can change the the source and destination directories for
-CoffeeScript, Stylus, Hogan.js and HTML page. For now you will need one configuration for each platform (iOS, Android, ...) since the cordova.js is platform specific. This will change in a future release to avoid duplication.
+You can change the source and destination directories for
+CoffeeScript, Stylus, Hogan.js and HTML page. For now you will need one configuration for each platform (iOS, Android, ...) since the cordova.js is platform specific. This will change in a future release of Verve to avoid duplication.
 
 ### CoffeeScript for JavaScript
 
-Use [CoffeeScript](http://coffeescript.org) on top of JavaScript for client side scripting.  
-Starting point: `src/coffeescript/Main.coffee`
+[CoffeeScript](http://coffeescript.org) is used instead of JavaScript.  
+Starting point: `src/coffeescripts/Main.coffee`
 
 ### Stylus for CSS
 
-[Stylus](http://learnboost.github.com/stylus/) is an expressive CSS language with lots of great features to take the pain
-out of writing plain CSS. It is very similar to LESS or SASS but is even more
-minimalistic dropping brackets, colons and semicolons.
+[Stylus](http://learnboost.github.com/stylus/) is a great minimalistic CSS language with lots of great features to take the pain out of writing plain CSS.  
 
 Verve comes with some default styles and mixins: `src/stylesheets/main.styl`
 
 ### Localization
 
-Localization is done with using [L](https://github.com/srohde/L). Declare your locales in `src/locales.json`:
+Localization is done using [L](https://github.com/srohde/L). Declare your locales in `src/locales.json`:
 
     L.initFile "locales.json", =>
       console.log L.get("greeting", "Verve")
 
 ### JQuery
 
-[JQuery](http://jquery.com/) is included in from `libs/client/jquery.1.7.1.min.js`.
+[JQuery](http://jquery.com/) is included from `libs/client/jquery.1.7.1.min.js`.
 
 ### Hogan.js Templates
 
-[Hogan.js](http://twitter.github.com/hogan.js/) is a compact JS templating engine. It is a JavaScript implementation of the popular [Mustache](http://mustache.github.com/) template engine:
+[Hogan.js](http://twitter.github.com/hogan.js/) is a compact JS templating engine. It is a JavaScript implementation of the popular [Mustache](http://mustache.github.com/) template engine. Verve automatically compiles all templates into the `T` namespace.  
 
     template = new Hogan.Template T.main
     $someDiv.append template.render(partial)
@@ -102,7 +136,7 @@ See `test/client/LTest.coffee` for an example test.
 
 All tests get executed whenever a file changes. TDD TFW.
 
-__Note__: To test your client side CoffeeScript classes your exports at the buttom of the class file look like this:
+__Note__: To test your client side CoffeeScript classes your exports at the bottom of the class file look like this:
 
     window?.<class_name> = <class_name>
     module?.exports = <class_name>
@@ -136,8 +170,16 @@ Run it with:
 
     $ make lint
     
-You'll see a couple of errors about trailing whitespaces which is because of this (open issue)[https://github.com/clutchski/coffeelint/issues/39].
+You'll see a couple of errors about trailing whitespaces which is because of this [open issue](https://github.com/clutchski/coffeelint/issues/39).
 
 ## License
 
-[Apache License 2](http://www.apache.org/licenses/LICENSE-2.0.html)
+(The MIT License)
+
+Copyright (c) 2012 Sönke Rohde http://soenkerohde.com
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
