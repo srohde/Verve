@@ -3,6 +3,11 @@ Verve
 
 Verve is a lightweight technology stack for modern web development. It was build to target mobile apps using [Apache Cordova](http://cordova.apache.org) aka [PhoneGap](http://phonegap.com).
 
+This is all licensed under MIT except for
+* libs/client/cordova-2.3.0rc2_ios.js
+* libs/client/hogan-1.0.5.js
+which are Apache 2.0.
+
 ## Quick Overview
 
 Verve is combining the use of the following open source projects:
@@ -174,7 +179,7 @@ Docs are generated using [docco](http://jashkenas.github.com/docco/) and [Pygmen
 
 ### Lint
 
-CoffeeLint is used for linting the code.  
+CoffeeLint is used to lint the code.  
 Config file: `test/config/coffeelint.coffee`  
 Run it with:
 
@@ -186,7 +191,7 @@ You'll see a couple of errors about trailing whitespaces which is because of thi
 
 (The MIT License)
 
-Copyright (c) 2012 Sönke Rohde http://soenkerohde.com
+Copyright (c) 2012 Sönke Rohde [http://soenkerohde.com](http://soenkerohde.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
