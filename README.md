@@ -155,6 +155,16 @@ Run it with:
 
 Check out the screenshot in the temp directory.
 
+### IPA File
+
+Edit the `build.properties` and add the name of your XCode project and scheme name.
+
+Create the IPA file using:
+
+    $ ant
+
+You can use the IPA file to distribute your app to test users using [Testflight](http://testflightapp.com).
+
 ### Docs
 
 Docs are generated using [docco](http://jashkenas.github.com/docco/) and [Pygments](http://pygments.org).

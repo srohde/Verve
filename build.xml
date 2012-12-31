@@ -1,0 +1,27 @@
+<project name="Verve" default="ipa">
+
+  <property file="build.properties" />
+  <property name="build.dir" value="${basedir}/build" />
+  
+  <target name="clean">
+    <delete dir="${build.dir}"/>
+  </target>
+
+  <target name="xcodebuild" depends="clean" description="Creates app in Applications dir.">
+    <exec executable="xcodebuild" failonerror="true" logError="true">
+      <arg line="-scheme ${scheme.name} -configuration Release INSTALL_ROOT=${build.dir} install"/>
+    </exec>
+  </target>
+
+  <target name="ipa" depends="xcodebuild" description="Zip Applications into ipa file.">
+    <move file="${build.dir}/Applications" tofile="${build.dir}/Payload"/>
+    <copy file="${basedir}/${app.name}/Resources/icons/icon-72.png" todir="${build.dir}/Payload"/>
+    <copy file="${basedir}/${app.name}/Resources/icons//icon-72@2x.png" todir="${build.dir}/Payload"/>
+
+    <zip destfile="${build.dir}/${app.name}.ipa">
+        <zipfileset dir="${build.dir}"/>
+    </zip>
+    <delete dir="${build.dir}/Payload"/>
+  </target>
+
+</project>
