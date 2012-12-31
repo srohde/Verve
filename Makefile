@@ -6,15 +6,15 @@ canary:
 clean:
 	rm -rf docs
 	rm -rf artifacts
+	rm -rf www
+	rm -rf temp
+	rm -rf node_modules
 
 ios:
 	cake --config ios.json dev
 
 android:
 	cake --config android.json dev
-
-deploy:
-	git push heroku refs/remotes/origin/master:refs/heads/master
 
 lint:
 	./node_modules/.bin/coffeelint -f test/config/coffeelint.json src/coffeescripts/*.coffee
