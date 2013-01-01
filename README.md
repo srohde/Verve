@@ -142,7 +142,7 @@ See `test/client/LTest.coffee` for an example test.
 
     $ make tddClient
 
-All tests get executed whenever a file changes. TDD TFW.
+All tests get executed whenever a file changes. TDD FTW.
 
 __Note__: To test your client side CoffeeScript classes your exports at the bottom of the class file look like this:
 
