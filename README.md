@@ -1,7 +1,7 @@
 Verve
 ===
 
-Verve is a lightweight technology stack for modern web development. It was build to target mobile apps using [Apache Cordova](http://cordova.apache.org) aka [PhoneGap](http://phonegap.com).
+Verve is a lightweight technology stack for modern web development. It was built to target mobile apps using [Apache Cordova](http://cordova.apache.org) aka [PhoneGap](http://phonegap.com).
 
 This is all licensed under MIT except for
 * libs/client/cordova-2.3.0rc2_ios.js
@@ -10,7 +10,7 @@ which are Apache 2.0.
 
 ## Quick Overview
 
-Verve is combining the use of the following open source projects:
+Verve combines the use of the following open source projects:
 
 * __CoffeeScript__ Scripting
 * __Stylus__ CSS
