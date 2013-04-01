@@ -45,7 +45,6 @@ class Main
     @app.append template.render(greeting: L.get("greeting", "Verve"))
 
     $content = @app.find("#content")
-    console.log "content"
     $content.on 'tap', (event) =>
       console.log "tap detected"
     @dragExample $content
