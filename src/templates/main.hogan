@@ -1,3 +1,4 @@
-<div id="content">
+<header>Verve</header>
+<div id="content" class="scrollable">
 {{greeting}}
 </div>

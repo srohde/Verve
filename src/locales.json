@@ -1,7 +1,7 @@
 {
   "greeting":{
-    "br": "Oi {0}.",
-    "de": "Hallo {0}.",
-    "en": "Hello {0}."
+    "br": "Oi {0}. Drag me!",
+    "de": "Hallo {0}. Drag me!",
+    "en": "Hello {0}. Drag me!"
   }
 }

@@ -14,13 +14,13 @@ Verve combines the use of the following open source projects:
 
 * __CoffeeScript__ Scripting
 * __Stylus__ CSS
+* __Nib__ Stylus Library
 * __Hogan__ HTML Templates
 * __Mocha__ Test engine
 * __Should__ BDD style assertions
 * __Casper.js__ Functional testing
 * __L__ Localization
-* __Hammer.js__ Touch events
-* __JQuery__ DOM, AJAX
+* __Zepto__ DOM, AJAX
 * __spin.js__ No image, no CSS spinner
 * __docco__ Docs
 * __Coffeelint__ Lint code
@@ -108,9 +108,9 @@ Localization is done using [L](https://github.com/srohde/L). Declare your locale
     L.initFile "locales.json", =>
       console.log L.get("greeting", "Verve")
 
-### JQuery
+### Zepto.js
 
-[JQuery](http://jquery.com/) is included from `libs/client/jquery.1.7.1.min.js`.
+[Zepto.js](http://zeptojs.com/) is included from `libs/client/zepto.min.js`.
 
 ### Hogan.js Templates
 
@@ -118,13 +118,6 @@ Localization is done using [L](https://github.com/srohde/L). Declare your locale
 
     template = new Hogan.Template T.main
     $someDiv.append template.render(partial)
-
-### Hammer.js for Touch Events
-
-[Hammer.js](http://eightmedia.github.com/hammer.js) is included to support touch events:
-
-    $("#someButton").hammer().on "tap", (event) ->
-      console.log "button tapped"
 
 ### Spin.js
 

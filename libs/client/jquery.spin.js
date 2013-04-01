@@ -44,4 +44,4 @@ $("#el").spin(false); // Kills the spinner.
 			throw "Spinner class not available.";
 		}
 	};
-})(jQuery);
+})($);

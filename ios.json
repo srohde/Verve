@@ -9,8 +9,8 @@
     "script": {
       "jsDir": "./libs/client",
       "jsFile": "./www/javascripts/libs.js", 
-      "jsFiles": ["jquery.1.7.1.min.js","hammer-0.6.1.js","jquery.hammer.js","hogan-1.0.5.js","jquery.spin.js","spin.min.js", "cordova-2.3.0rc2_ios.js"],
-      "scriptTags": ["L.js", "Main.js", "templates.js"]
+      "jsFiles": ["zepto.min.js","hogan-1.0.5.js","jquery.spin.js","spin.min.js", "cordova-2.3.0rc2_ios.js"],
+      "scriptTags": ["L.js", "Touch.js", "Main.js", "templates.js"]
     }
   },
   "coffeescript": [
