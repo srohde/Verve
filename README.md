@@ -127,7 +127,7 @@ Localization is done using [L](https://github.com/srohde/L). Declare your locale
 
 ### Unit Tests with Mocha and Should
 
-[Mocha](http://visionmedia.github.com/mocha/) a feature-rich JavaScript test framework and [should.js](https://github.com/visionmedia/should.js/tree/) and
+[Mocha](http://mochajs.org/) a feature-rich JavaScript test framework and [should.js](https://github.com/visionmedia/should.js/tree/) and
 expressive, readable, test framework agnostic, assertion library.  
 Both combined together offer a very minimalistic but powerful
 way to unit test your code.
